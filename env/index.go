@@ -11,7 +11,7 @@ var AdminPassword string
 var AllowOrigin string
 
 func init() {
-	err := godotenv.Load()
+	err := godotenv.Load("./data/.env")
 	if err != nil {
 		fmt.Println("Error: Cannot read .env file")
 		panic(err.Error())
