@@ -7,12 +7,12 @@ import (
 	"github.com/juhonamnam/wedding-invitation-server/env"
 	"github.com/juhonamnam/wedding-invitation-server/httphandler"
 	"github.com/juhonamnam/wedding-invitation-server/sqldb"
-	_ "github.com/mattn/go-sqlite3"
+	_ "github.com/glebarez/go-sqlite"
 	"github.com/rs/cors"
 )
 
 func main() {
-	db, err := sql.Open("sqlite3", "./sql.db")
+	db, err := sql.Open("sqlite", "./sql.db")
 	if err != nil {
 		panic(err)
 	}
